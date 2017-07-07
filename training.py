@@ -29,9 +29,9 @@ def my_model():
     # Создаем последовательную модель
     model = Sequential()
     # Добавляем уровни сети
-    model.add(Dense(512, input_dim=784, init="normal", activation="relu"))
-    model.add(Dense(512, input_dim=784, init="normal", activation="relu"))
-    model.add(Dense(10, init="normal", activation="softmax"))
+    model.add(Dense(512, input_dim=784, kernel_initializer="normal", activation="relu"))
+    model.add(Dense(512, input_dim=784, kernel_initializer="normal", activation="relu"))
+    model.add(Dense(10, kernel_initializer="normal", activation="softmax"))
     # Компилируем модель
     model.compile(loss="categorical_crossentropy",
                   optimizer="adam", metrics=["accuracy"])
