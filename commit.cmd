@@ -1,5 +1,6 @@
 @echo off
 
+git status
 git add -A
 git status
 pause
@@ -14,5 +15,6 @@ set mm=%DATE:~3,2%
 set yyyy=%DATE:~6,4%
 set curdate=%dd%-%mm%-%yyyy%
 set curdatetime=%curdate% %curtime%
+echo ******************* Commiting *******************
 
 git commit -m "Update %curdatetime%"
